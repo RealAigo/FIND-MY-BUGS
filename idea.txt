@@ -1,0 +1,6 @@
+Find My Bugs
+
+Reasercher : finds Bugs
+client : hire all platform to find bugs in is website
+admin : manage everything
+validator : validates the findings and 
