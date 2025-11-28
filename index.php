@@ -33,7 +33,9 @@
             <a href="#" class="cta secondary">Become a Researcher</a>
         </div>
 
-        <div class="bg-lines"></div>
+        <div class="bg-lines">
+            <img class="bug" src="assets/img/bug.png">
+        </div>
         <canvas id="particles"></canvas>
     </section>
 
