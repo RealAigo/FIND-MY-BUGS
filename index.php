@@ -20,9 +20,27 @@
             <li><a href="#">Programs</a></li>
             <li><a href="#">Researchers</a></li>
             <li><a href="#" class="btn">Sign In</a></li>
+
         </ul>
     </nav>
 
+    <button class="menu-button" data-menu-toggle>
+        <span class="menu-text">Menu</span>
+    </button>
+    <div class="nav-overlay">
+        <div class="wipe-panel panel-1"></div>
+        <div class="wipe-panel panel-2"></div>
+        <div class="wipe-panel panel-3"></div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Work</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+        </nav>
+
+        <button class="close-button" data-menu-toggle>Close</button>
+    </div>
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="content">

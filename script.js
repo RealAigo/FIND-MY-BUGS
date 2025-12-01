@@ -87,3 +87,49 @@ function animateParticles() {
     requestAnimationFrame(animateParticles);
 }
 animateParticles();
+document.addEventListener("DOMContentLoaded", () => {
+    // Select elements
+    const toggleButtons = document.querySelectorAll("[data-menu-toggle]");
+    const panels = document.querySelectorAll(".wipe-panel");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const closeButton = document.querySelector(".close-button");
+    const overlay = document.querySelector(".nav-overlay");
+
+    // Create GSAP Timeline (paused initially)
+    const tl = gsap.timeline({ paused: true });
+
+    // 1. Animate Panels (Wipe Down)
+    tl.to(panels, {
+        height: "100%",
+        duration: 0.8,
+        stagger: 0.05, // Slight delay between panels
+        ease: "power4.inOut"
+    })
+        // 2. Enable pointer events on overlay
+        .set(overlay, { pointerEvents: "all" }, "-=0.5")
+        // 3. Fade/Slide in Menu Links
+        .from(navLinks, {
+            y: 50,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: "power2.out"
+        }, "-=0.2")
+        // 4. Show Close Button
+        .to(closeButton, { opacity: 1, duration: 0.3 }, "<");
+
+    // Toggle Logic
+    let isOpen = false;
+
+    toggleButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            if (!isOpen) {
+                tl.play();
+                isOpen = true;
+            } else {
+                tl.reverse();
+                isOpen = false;
+            }
+        });
+    });
+});
