@@ -13,7 +13,7 @@ gsap.from("#heroTitle", {
     ease: "power4.out"
 });
 
-gsap.from(".hero p", {
+gsap.from(".hero span", {
     y: 40,
     opacity: 0,
     delay: 0.4,

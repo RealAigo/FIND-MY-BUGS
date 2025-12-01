@@ -26,9 +26,8 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="content">
-            <h1 id="heroTitle">Find Vulnerabilities.<br>Reward Researchers.<br>Secure Your Apps.</h1>
-            <p>Launch bug bounty programs. Pay only for real security findings.</p>
-
+            <h1 id="heroTitle">Find Vulnerabilities.<br>Reward Researchers.<br>Secure <br>Your Apps.</h1>
+            <br><br>
             <a href="#" class="cta">Launch Program</a>
             <a href="#" class="cta secondary">Become a Researcher</a>
         </div>
